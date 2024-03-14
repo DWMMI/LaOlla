@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        datos = new ArrayList<>();
+        datos.add(new ItemLista(R.drawable.abejaruco, "Abejaruco"));
+        datos.add(new ItemLista(R.drawable.abejaruco, "Abejaruco2"));
+        datos.add(new ItemLista(R.drawable.abejaruco, "Abejaruco3"));
         miRecyclerView = findViewById(R.id.recview);
         miRecyclerView.setHasFixedSize(true);
         miLayoutManager = new LinearLayoutManager(this);
