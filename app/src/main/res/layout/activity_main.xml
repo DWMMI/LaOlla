@@ -5,23 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/buscador"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView2"
+        android:name="com.bumptech.glide.manager.SupportRequestManagerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        android:background="@drawable/rounded_search_view"
+        android:iconifiedByDefault="false"
+        android:queryHint="Buscar..." />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recview"
-        android:scrollbars="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="20">
+        android:layout_height="665dp"
+        android:layout_weight="20"
+        android:scrollbars="vertical">
 
     </androidx.recyclerview.widget.RecyclerView>
 
@@ -33,12 +46,15 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Monday" />
+            android:icon="@drawable/flame_fill"
+            android:text="LaOlla" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tuesday" />
+            android:icon="@drawable/plus_circle_fill"
+            android:text="Añadir" />
 
     </com.google.android.material.tabs.TabLayout>
+
 </LinearLayout>
